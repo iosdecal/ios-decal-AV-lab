@@ -32,7 +32,7 @@ class ImagePickerViewController: UIViewController {
     var previewLayer : AVCaptureVideoPreviewLayer?
     
     // used to capture a single photo from our capture device
-    let photoOutput: AVCapturePhotoOutput?
+    let photoOutput: AVCapturePhotoOutput? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
