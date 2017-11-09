@@ -42,7 +42,7 @@ class ImagePickerViewController: UIViewController {
             return
         }
         
-        // TODO: instantiate `captureSession` and `photoOutput` here (no need to pass in any 
+        // TODO: instantiate `captureSession` here (no need to pass in any
         // parameters into their initializers
         
         // TODO: uncomment me when the README tells you to!
@@ -60,7 +60,9 @@ class ImagePickerViewController: UIViewController {
     }
 
     
-    // Configures `captureSession` with an input and output (you'll need to implement this!)
+    /// Should configure `captureSession` with an input and output (you'll need to implement this!)
+    ///
+    /// - Parameter devicePostion: AVCaptureDevice.Position type
     func configureCaptureSession(forDevicePosition devicePostion: AVCaptureDevice.Position) {
         guard let captureSession = captureSession else {
             print("captureSession has not been initialized")
@@ -119,7 +121,7 @@ class ImagePickerViewController: UIViewController {
     ///
     /// - Parameter sender: The flip camera button in the top left of the view
     @IBAction func flipCameraButtonWasPressed(_ sender: UIButton) {
-        // TODO: allow user to switch between front and back camera
+        // TODO: allow user to switch between front and back camera.
         // you will need to remove all of your inputs from
         // your capture session before switching cameras
     }
