@@ -32,7 +32,7 @@ class ImagePickerViewController: UIViewController {
     var previewLayer : AVCaptureVideoPreviewLayer?
     
     // used to capture a single photo from our capture device
-    let photoOutput: AVCapturePhotoOutput? = nil
+    var photoOutput: AVCapturePhotoOutput? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,7 +70,9 @@ class ImagePickerViewController: UIViewController {
         // specifies that we want high quality video captured from the device
         captureSession.sessionPreset = AVCaptureSession.Preset.high
         
-        // TODO: this line will need to be edited for part 5 
+        // This line will need to be edited for part 5.
+        // It has a bad name (and is poorly written syntactically) because we want
+        // you to think about what it's type should be. 
         let someConstantWithABadName = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: .video, position: devicePostion).devices[1]
     
         do {
