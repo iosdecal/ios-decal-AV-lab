@@ -16,7 +16,7 @@ class ImagePickerViewController: UIViewController {
     @IBOutlet weak var imageViewOverlay: UIImageView!
     @IBOutlet weak var flipCameraButton: UIButton!
     @IBOutlet weak var takePhotoButton: UIButton!
-    @IBOutlet weak var sendImageButton: UIButton!
+    @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
     
     // The image to send as a Snap
@@ -37,7 +37,7 @@ class ImagePickerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let _ = imageViewOverlay, let _ = takePhotoButton, let _ = sendImageButton, let _ = cancelButton, let _ = flipCameraButton else {
+        guard let _ = imageViewOverlay, let _ = takePhotoButton, let _ = sendButton, let _ = cancelButton, let _ = flipCameraButton else {
             print("Looks like you haven't connected all of your outlets!")
             return
         }
@@ -102,7 +102,7 @@ class ImagePickerViewController: UIViewController {
         previewLayer.zPosition = -1
     }
     
-    @IBAction func takePhoto(_ sender: UIButton) {
+    @IBAction func takePhotoButtonWasPressed(_ sender: UIButton) {
         // Instead of sending a squirrel pic every time, here we will want
         // to start the process of creating a photo from our photoOutput
         
@@ -119,7 +119,7 @@ class ImagePickerViewController: UIViewController {
     /// Switch between front and back camera
     ///
     /// - Parameter sender: The flip camera button in the top left of the view
-    @IBAction func flipCamera(_ sender: UIButton) {
+    @IBAction func flipCameraButtonWasPressed(_ sender: UIButton) {
         // TODO: allow user to switch between front and back camera
         // you will need to remove all of your inputs from
         // your capture session before switching cameras
@@ -130,7 +130,7 @@ class ImagePickerViewController: UIViewController {
         toggleUI(isInPreviewMode: false)
     }
     
-    @IBAction func sendImage(_ sender: UIButton) {
+    @IBAction func sendButtonWasPressed(_ sender: UIButton) {
         performSegue(withIdentifier: "imagePickerToChooseThread", sender: nil)
     }
     
@@ -144,14 +144,14 @@ class ImagePickerViewController: UIViewController {
         if isInPreviewMode {
             imageViewOverlay.image = selectedImage
             takePhotoButton.isHidden = true
-            sendImageButton.isHidden = false
+            sendButton.isHidden = false
             cancelButton.isHidden = false
             flipCameraButton.isHidden = true
             
         }
         else {
             takePhotoButton.isHidden = false
-            sendImageButton.isHidden = true
+            sendButton.isHidden = true
             cancelButton.isHidden = true
             imageViewOverlay.image = nil
             flipCameraButton.isHidden = false
