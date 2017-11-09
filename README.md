@@ -96,3 +96,7 @@ To toggle between the front facing camera and the rear facing camera, you'll nee
  2. You may (and should) reuse the same `captureSession` when switching devices/cameras (meaning, you should be calling `configureCaptureSession` again within `flipCamera`), but you must remove your old camera input before adding a new one. You can do this by iterating through you `captureSession.inputs` and calling `captureSession.removeInput`.
 
 If you implemented this correctly, you should be able to toggle back and forth between both of your device's cameras. Nice work!
+
+
+## Grading ##
+Once you've finished the lab, you can check-off using this form https://goo.gl/forms/4aXgPQFhdEK5ZDPs2. If you weren't able to finish before 8:30pm, make sure to let a TA know you attended (do not fill out the google form) **and** make sure to get checked off next week.
