@@ -60,9 +60,7 @@ class ImagePickerViewController: UIViewController {
     }
 
     
-    // Creates a new capture session, and starts updating it using the user's.
-    /// You may want to add a parameter to this function for
-    /// part 4 of the lab
+    // Configures `captureSession` with an input and output (you'll need to implement this!)
     func configureCaptureSession(forDevicePosition devicePostion: AVCaptureDevice.Position) {
         guard let captureSession = captureSession else {
             print("captureSession has not been initialized")
@@ -72,7 +70,7 @@ class ImagePickerViewController: UIViewController {
         // specifies that we want high quality video captured from the device
         captureSession.sessionPreset = AVCaptureSession.Preset.high
         
-        // this line will need to be edited for part 5
+        // TODO: this line will need to be edited for part 5 
         let someConstantWithABadName = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: .video, position: devicePostion).devices[1]
     
         do {
@@ -95,8 +93,7 @@ class ImagePickerViewController: UIViewController {
             return
         }
     
-        // these two lines add the previewlayer to our
-        // viewcontroller's view
+        // these two lines add the previewlayer to our viewcontroller's view programattically
         view.layer.addSublayer(previewLayer)
         previewLayer.frame = view.layer.frame
         previewLayer.zPosition = -1
