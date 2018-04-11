@@ -1,6 +1,6 @@
 //
 //  CurrentUser.swift
-//  snapChatProject
+//  Snapchat Camera Lab
 //
 //  Created by Daniel Phiri on 10/17/17.
 //  Copyright © 2017 org.iosdecal. All rights reserved.
