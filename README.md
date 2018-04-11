@@ -7,7 +7,28 @@ Note: You will need an iPhone or iPad with iOS 11 installed and lightning USB ca
 
 In today's lab, you'll get some experience with part of AVFoundation by creating a camera for your Snapchat Clone, while also becoming more familiar with handling user permissions and looking up information in Apple Developer Documentation. Since this lab requires a hardware camera, you'll be testing your application on an iOS device (iPhone/iPad).
 
-This assignment builds off hw3 pt2. Instead of using your own Firebase console, we've connected the project to a shared Firebase project, so that you can send snaps to the entire class. You can view the console here: https://console.firebase.google.com/u/3/project/ios-snapchat, though you will not need to interact with it for this lab. 
+This assignment builds off hw3 pt2. Instead of using your own Firebase console, we've connected the project to a shared Firebase project, so that you can send snaps to the entire class. We'll be using the same structure as we used in the homework. But we already implemented that for you.
+
+		                        +------+
+		                     +--+ Root +---+
+		                     |  +------+   |
+		                     |             |
+		                     |             |
+		                     |             |
+		                  +--v--+      +---v---+
+		                  |Posts|      | Users |
+		                  +--+--+      +---+---+
+		                     |             |
+		                     |             |
+		              +------v-----+ +-----v------+
+		              |            | |            |
+		+------+      | +--------+ | | +--------+ |   +---------+
+		|*post*|<-------+*postID*| | | |*userID*+---->|readPosts|
+		+------+      | +--------+ | | +--------+ |   +---------+
+		              |    ...     | |    ...     |
+		              +------------+ +------------+
+		              
+              
 
 ## Getting Started ##
 
@@ -28,7 +49,7 @@ Try building. You'll see an error pop up saying "Signing for "snapChatProject" r
 Once you've set your Team as your Apple ID, try running your app again on your device. If everything's working, you'll see a blank gray view with some buttons (that don't work yet). If you still are having an issue, ask one of the TA's for help (you may need to change your deployment target from 11.1 to 11.0 if your phone is not running the lastest iOS version). The first build on your device should take a few minutes to complete, so give Xcode some time to build.
 
 ## Part 2: Connecting Outlets ##
-Just so you become more familiar with the which views are which, we left the outlets and actions in **ImagePickerViewController.swift** unconnected to storyboard. **Go ahead and connect these outlets and actions in ImagePickerViewController.swift to Main.storyboard**. Make sure to read the comments above each IBOutlet and IBAction, so that you are sure you are connecting them correctly.
+Just so you become more familiar with which views are which, we left the outlets and actions in **ImagePickerViewController.swift** unconnected to storyboard. **Go ahead and connect these outlets and actions in ImagePickerViewController.swift to Main.storyboard**. Make sure to read the comments above each IBOutlet and IBAction, so that you are sure you are connecting them correctly.
  
  > Tip: may find it helpful to open the **Document Outline**. You can drag from Outlets and Actions in code to UI elements in the Document Outline if you find that easier. If you need to delete any connections you made, tap on your ViewController in the Document Outline or in Storyboard, and open the **Connections Inspector** to see all of your connections and delete any if necessary.
  
