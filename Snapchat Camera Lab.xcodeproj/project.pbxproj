@@ -223,7 +223,6 @@
 				TargetAttributes = {
 					4196F2C61E6509E8009916E4 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 9V456WSURS;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
@@ -459,7 +458,7 @@
 			baseConfigurationReference = 0A27CDF7C84324BBA5A58A14 /* Pods-Snapchat Camera Lab.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9V456WSURS;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Snapchat Camera/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.iosdecal.ClassSnapchatClone;
@@ -474,7 +473,7 @@
 			baseConfigurationReference = 6CDF8EB5D5B6E039FECF57A1 /* Pods-Snapchat Camera Lab.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9V456WSURS;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Snapchat Camera/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.iosdecal.ClassSnapchatClone;
