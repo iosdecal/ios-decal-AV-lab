@@ -75,7 +75,10 @@ class CameraViewController: UIViewController {
         // This line will need to be edited for part 5.
         // It has a bad name (and is poorly written syntactically) because we want
         // you to think about what it's type should be. 
-        let someConstantWithABadName = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: .video, position: devicePostion).devices[1]
+		guard let someConstantWithABadName = AVCaptureDevice.default(.builtInWideAngleCamera, for: AVMediaType.video, position: devicePostion) else {
+			print("No available capture devices.")
+			return
+		}
     
         do {
             // TODO: add an input and output to our AVCaptureSession
