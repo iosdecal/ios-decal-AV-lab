@@ -14,7 +14,7 @@
 		4196F2CB1E6509E8009916E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4196F2CA1E6509E8009916E4 /* AppDelegate.swift */; };
 		4196F2D01E6509E8009916E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4196F2CE1E6509E8009916E4 /* Main.storyboard */; };
 		4196F2DD1E650ECA009916E4 /* ImageFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4196F2DC1E650ECA009916E4 /* ImageFeed.swift */; };
-		4196F2E31E6514EE009916E4 /* ImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4196F2E21E6514EE009916E4 /* ImagePickerController.swift */; };
+		4196F2E31E6514EE009916E4 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4196F2E21E6514EE009916E4 /* CameraController.swift */; };
 		4578E0701FAE8980009838AB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4578E06F1FAE8980009838AB /* GoogleService-Info.plist */; };
 		6C53C7661E723D77004D15B6 /* PostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C53C7651E723D77004D15B6 /* PostsTableViewController.swift */; };
 		6C53C7681E723D87004D15B6 /* PostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C53C7671E723D87004D15B6 /* PostsTableViewCell.swift */; };
@@ -37,7 +37,7 @@
 		4196F2CF1E6509E8009916E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4196F2D61E6509E8009916E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4196F2DC1E650ECA009916E4 /* ImageFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFeed.swift; sourceTree = "<group>"; };
-		4196F2E21E6514EE009916E4 /* ImagePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImagePickerController.swift; path = "Snapchat Camera/ImagePickerController.swift"; sourceTree = SOURCE_ROOT; };
+		4196F2E21E6514EE009916E4 /* CameraController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraController.swift; path = "Snapchat Camera/CameraController.swift"; sourceTree = SOURCE_ROOT; };
 		4578E06F1FAE8980009838AB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6C53C7651E723D77004D15B6 /* PostsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsTableViewController.swift; sourceTree = "<group>"; };
 		6C53C7671E723D87004D15B6 /* PostsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsTableViewCell.swift; sourceTree = "<group>"; };
@@ -67,6 +67,7 @@
 		417986CC1E6656930050E1DF /* App Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				4578E06F1FAE8980009838AB /* GoogleService-Info.plist */,
 				417986CA1E664CB60050E1DF /* ImageFlowLayout.swift */,
 				4196F2CA1E6509E8009916E4 /* AppDelegate.swift */,
 			);
@@ -83,12 +84,12 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		417986CE1E6657650050E1DF /* Image Picker */ = {
+		417986CE1E6657650050E1DF /* Camera */ = {
 			isa = PBXGroup;
 			children = (
-				4196F2E21E6514EE009916E4 /* ImagePickerController.swift */,
+				4196F2E21E6514EE009916E4 /* CameraController.swift */,
 			);
-			name = "Image Picker";
+			name = Camera;
 			sourceTree = "<group>";
 		};
 		417986CF1E6657910050E1DF /* Tab Bar */ = {
@@ -121,14 +122,13 @@
 		4196F2C91E6509E8009916E4 /* Snapchat Camera */ = {
 			isa = PBXGroup;
 			children = (
-				4578E06F1FAE8980009838AB /* GoogleService-Info.plist */,
 				942472491F9106A1007257E7 /* Authentication */,
 				942472481F910694007257E7 /* Constants */,
 				417986CD1E66571B0050E1DF /* Model */,
 				417986CC1E6656930050E1DF /* App Utilities */,
 				4196F2CE1E6509E8009916E4 /* Main.storyboard */,
 				6C71409E1E70C70F00D38EAD /* Choose Thread */,
-				417986CE1E6657650050E1DF /* Image Picker */,
+				417986CE1E6657650050E1DF /* Camera */,
 				417986CF1E6657910050E1DF /* Tab Bar */,
 				417986C21E6631020050E1DF /* Assets.xcassets */,
 				6C53C7641E723D51004D15B6 /* Posts */,
@@ -315,7 +315,7 @@
 			files = (
 				417986CB1E664CB60050E1DF /* ImageFlowLayout.swift in Sources */,
 				9424724B1F9106E4007257E7 /* Strings.swift in Sources */,
-				4196F2E31E6514EE009916E4 /* ImagePickerController.swift in Sources */,
+				4196F2E31E6514EE009916E4 /* CameraController.swift in Sources */,
 				417986C51E6632C40050E1DF /* TabBarController.swift in Sources */,
 				6CB38BE31E748E31000E3E31 /* Post.swift in Sources */,
 				9424724D1F910B3A007257E7 /* LogInViewController.swift in Sources */,

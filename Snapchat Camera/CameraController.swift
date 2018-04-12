@@ -1,5 +1,5 @@
 //
-//  ImagePickerViewController.swift
+//  CameraViewController.swift
 //  Snapchat Camera Lab
 //
 //  Created by Paige Plander on 3/11/17.
@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 
 // TODO: you'll need to edit this line to make your class conform to a protocol
-class ImagePickerViewController: UIViewController {
+class CameraViewController: UIViewController {
     
     // Part 1 involves connecting these outlets
     @IBOutlet weak var imageViewOverlay: UIImageView!
