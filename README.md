@@ -116,7 +116,7 @@ Right now, we can only take pictures using the front camera. To add support for 
 To toggle between the front facing camera and the rear facing camera, you'll need to edit this constant, as well as the method `flipCamera`. Some hints:
 
  1. You'll need to pass in a different `AVCaptureDevice.position` to `someConstantWithABadName`
- 2. You may (and should) reuse the same `captureSession` when switching devices/cameras (meaning, you should be calling `configureCaptureSession(forDevicePosition:)` again within `flipCamera`), but you must remove your old camera input before adding a new one. You can do this by iterating through `captureSession.inputs` and calling `captureSession.removeInput(_)`.
+ 2. You may (and should) reuse the same `captureSession` when switching devices/cameras (meaning, you should be calling `configureCaptureSession(forDevicePosition:)` again within `flipCamera`), but you must remove your old camera input before adding a new one. You can do this by getting the first input from `captureSession.inputs` (if one exists) and calling `captureSession.removeInput(_)` passing it in as an argument.
 
 If you implemented this correctly, you should be able to toggle back and forth between both of your device's cameras. Nice work!
 
